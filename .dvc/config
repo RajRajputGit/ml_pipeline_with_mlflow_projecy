@@ -1,2 +1,3 @@
 ['remote "origin"']
-    url = https://dagshub.com/brajrajputofficial/ml_pipeline_with_mlflow_projecy.dvc
+    url = s3://dvc
+    endpointurl = https://dagshub.com/brajrajputofficial/ml_pipeline_with_mlflow_projecy.s3
