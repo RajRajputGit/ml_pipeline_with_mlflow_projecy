@@ -53,7 +53,7 @@ def train_model(data_path,model_path,random_state,n_estimators,max_depth):
     cr = classification_report(y_test, y_pred)
 
 
-    #mlflow tracking
+    #mlflow tracking uri
     mlflow.set_tracking_uri("https://dagshub.com/brajrajputofficial/ml_pipeline_with_mlflow_projecy.mlflow")
 
     #logging the parameters and metrics using mlflow run
@@ -67,6 +67,9 @@ def train_model(data_path,model_path,random_state,n_estimators,max_depth):
         mlflow.log_param("max_depth", best_model.max_depth)
         mlflow.log_param("min_samples_split", best_model.min_samples_split)
         mlflow.log_param("min_samples_leaf", best_model.min_samples_leaf)
+
+        cm = confusion_matrix(y_test, y_pred)
+        cr = classification_report(y_test, y_pred)
 
         #logging the metrics
         mlflow.log_metric("accuracy", accuracy)

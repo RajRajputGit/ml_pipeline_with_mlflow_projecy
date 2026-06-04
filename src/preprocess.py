@@ -20,5 +20,10 @@ def preprocess_data(input_path, output_path):
 
     print(f"Preprocessed data saved at{output_path}")
 
+
+
+
+
+
 if __name__ == "__main__":
     preprocess_data(params["input"],params["output"])
