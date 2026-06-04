@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/__init__.py
+src/evaluate.py
+src/preprocess.py
+src/train.py
+src/ml_pipeline_with_mlflow_projecy.egg-info/PKG-INFO
+src/ml_pipeline_with_mlflow_projecy.egg-info/SOURCES.txt
+src/ml_pipeline_with_mlflow_projecy.egg-info/dependency_links.txt
+src/ml_pipeline_with_mlflow_projecy.egg-info/requires.txt
+src/ml_pipeline_with_mlflow_projecy.egg-info/top_level.txt
