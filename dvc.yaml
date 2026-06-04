@@ -1,10 +1,4 @@
 stages:
-  evaluate:
-    cmd: python src/evaluate.py
-    deps:
-    - data/processed/data.csv
-    - models/model.pkl
-    - src/evaluate.py
   preprocess:
     cmd: python src/preprocess.py
     deps:
@@ -18,13 +12,19 @@ stages:
   train:
     cmd: python src/train.py
     deps:
-    - data/processed/data.csv
+    - data/raw/data.csv
     - src/train.py
     params:
-    - train.data_path
+    - train.data
     - train.max_depth
-    - train.model_path
+    - train.model
     - train.n_estimators
     - train.random_state
     outs:
     - models/model.pkl
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - data/raw/data.csv
+    - models/model.pkl
+    - src/evaluate.py

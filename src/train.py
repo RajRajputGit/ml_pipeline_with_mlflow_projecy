@@ -89,4 +89,4 @@ def train_model(data_path,model_path,random_state,n_estimators,max_depth):
         print(f"Model saved at {model_path}")
 
 if __name__ == "__main__":
-    train_model(params["data_path"],params["model_path"],params["random_state"],params["n_estimators"],params["max_depth"])
+    train_model(params["data"],params["model"],params["random_state"],params["n_estimators"],params["max_depth"])

@@ -11,7 +11,6 @@ os.environ["MLFLOW_TRACKING_URI"] = "https://dagshub.com/brajrajputofficial/ml_p
 os.environ["MLFLOW_TRACKING_USERNAME"] = "brajrajputofficial"
 os.environ["MLFLOW_TRACKING_PASSWORD"] = "f01d1e3006e34deb71d36df5aaf8a49613c143a7"
 
-
 # Load parameters from params.yaml
 params = yaml.safe_load(open("params.yaml"))["train"]
 
@@ -30,7 +29,7 @@ def evaluate(data_path,model_path):
     ## log metrics to MLFLOW
 
     mlflow.log_metric("accuracy",accuracy)
-    print(f"Model accuracy: {accuracy}")
+    print(f"Model accuracy:{accuracy}")
 
 if __name__=="__main__":
-    evaluate(params["data_path"],params["model_path"])
+    evaluate(params["data"],params["model"])
