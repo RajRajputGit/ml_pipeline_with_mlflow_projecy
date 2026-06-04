@@ -3,6 +3,7 @@ Name: ml_pipeline_with_mlflow_projecy
 Version: 0.1.0
 Summary: A machine learning pipeline with MLflow
 Author: RajRajputGit
+Requires-Python: >=3.10
 Requires-Dist: dvc
 Requires-Dist: scikit-learn
 Requires-Dist: mlflow
